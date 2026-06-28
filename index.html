@@ -12,9 +12,9 @@
     <header>
 
         <h1>Prototipo de Gamificação de Estudo</h1>
-        <button id="tema">
+        <!-- <button id="tema">
             🌙
-        </button>
+        </button> -->
 
     </header>
 
@@ -22,15 +22,19 @@
     <nav>
 
         <button class="aba ativa" onclick="abrirAba('dashboard')">
-            📅 Dashboard
+            📅 Inicio
         </button>
 
         <button class="aba" onclick="abrirAba('resumo')">
-            📚 Resumo
+            📚 Teoria
         </button>
 
         <button class="aba" onclick="abrirAba('quiz')">
-            📝 Quiz
+            🧠 Teste
+        </button>
+
+        <button class="aba" onclick="abrirAba('perfil')">
+            ⚙️ Perfil
         </button>
 
         
@@ -39,16 +43,44 @@
 
 
     <main>
+        
+        <!-- ABA de INICIO -->
 
-        <section id='dashboard'></section>
+        <section id='dashboard' class="conteudo ativo">
+
+            <div class="card">
+                <h1>Introdução</h1>
+                <p>O objetivo deste protótipo é aumentar a produtividade do estudante, seja concurseiro, curiosos ou alunos de faculdade ou escolas, para facilitar a absorção de conhecimento de forma rápida e concisa.</p>
+            </div>
+
+            <div class="card">
+                <h2>Agenda</h2>
+                <p>Você terá o controle seus compromissos de estudos e provas.</p>
+            </div>
+
+            <div class="card">
+                <h2>Status</h2>
+                <p>Resumo de dados de evolução do seus estudos.</p>
+            </div>
+
+            <div class="card">
+                <h2>Noticias</h2>
+                <p>Informativos sobre certificações, vertibulares ou concurso.</p>
+            </div>
+
+            
+
+            
+
+        </section>
 
 
         <!-- ABA RESUMO -->
 
-        <section id="resumo" class="conteudo ativo">
+        <section id="resumo" class="conteudo">
 
 
-            <h2>📖 Resumo dos principais assuntos</h2>
+            <h2>📖 Demonstração do conteudo</h2>
 
 
 
@@ -525,7 +557,6 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
         </section>
 
 
-
         <!-- ABA QUIZ -->
 
         <section id="quiz" class="conteudo">
@@ -584,12 +615,43 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
         </section>
 
 
+        <!-- ABA PERFIL -->
+
+        <section id="perfil" class="conteudo">
+            
+             <div class="card">
+
+                <button id="tema" style="justify-self: end;">🌙</button>
+                <h1>Status</h1>
+                <p>Dados da sua evolução.</p>
+
+                <div id="perfilDados">
+                    <div id="foto"></div>
+                    <div id="dados"></div>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <div class="nivelConteudo"></div>
+            </div>
+
+            <div class="card">
+                <div class="nivelConteudo"></div>
+            </div>
+
+            <div class="card">
+                <div class="nivelConteudo"></div>
+            </div>
+        </section>
+
+
     </main>
 
     <footer id="rodape">
         <button id="tenteNovamente" onclick="recarregaPagina()">
             <strong>
-                <a href="https://caiovaless.github.io/exemplar-de-estudo/" style="text-decoration: none; color: white">
+                <a href="https://caio-vale.github.io/Estudos/" style="text-decoration: none; color: white">
                     Início
                 </a>
             </strong>
@@ -611,6 +673,9 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
             font-family: Arial, Helvetica, sans-serif;
             transition: 0.3s;
             line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
         }
 
 
@@ -634,18 +699,17 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
 
         header {
             display: flex;
-            background: #2e7d32;
+            background: #2989c0;
             color: white;
             text-align: center;
             padding: 20px;
-            position: sticky;
+            /*position: sticky;*/
             top: 0;
             z-index: 10;
         }
 
 
         header h1 {
-            margin-bottom: 15px;
             font-size: 26px;
         }
 
@@ -653,14 +717,15 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
         /* BOTÃO DE TEMA */
 
         #tema {
-            background: #2e7d32;
-            color: #2e7d32;
+            height: 20px;
+            display: flex;
+            background: white;
             border: none;
             margin-left:10px ;
             border-radius: 20px;
             cursor: pointer;
             font-weight: bold;
-            font-size: 15px;
+            font-size: 20px;
             transition: 0.3s;
         }
 
@@ -675,9 +740,10 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
         nav {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            justify-content: space-between;
             padding: 15px;
-            background: #d9eadb;
+            background: #d9e8ea;
+            position: sticky;
         }
 
         /*   RODAPE   */
@@ -687,11 +753,11 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
             justify-content: center;
             height: 300%;
             padding: 30px;
-            background: #d9eadb;
+            background: #d9e8ea;
         }
 
         #tenteNovamente {
-            background: #2e7d32;
+            background: #2989c0;
             color: white;
             border: none;
             padding: 15px 100px;
@@ -725,7 +791,7 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
 
 
         .aba.ativa {
-            background: #2e7d32;
+            background: #2989c0;
             color: white;
         }
 
@@ -762,13 +828,13 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
 
 
         .card h3 {
-            color: #2e7d32;
+            color: #2989c0;
             margin-bottom: 12px;
         }
 
 
         body.escuro .card h3 {
-            color: #66bb6a;
+            color: #8fd6ff;
         }
 
 
@@ -787,7 +853,7 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
         .formula {
             background: #e8f5e9;
             padding: 15px;
-            border-left: 6px solid #2e7d32;
+            border-left: 6px solid #2989c0;
             border-radius: 10px;
             margin-top: 10px;
         }
@@ -827,7 +893,7 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
         #barra {
             height: 100%;
             width: 0%;
-            background: #2e7d32;
+            background: #2989c0;
             transition: 0.5s;
         }
 
@@ -865,14 +931,14 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
 
 
         .opcao:hover {
-            border-color: #2e7d32;
+            border-color: #2989c0;
         }
 
 
         /* ALTERNATIVA SELECIONADA */
 
         .opcao.selecionada {
-            border: 2px solid #2e7d32;
+            border: 2px solid #2989c0;
             font-weight: bold;
         }
 
@@ -882,7 +948,7 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
         #responder {
             margin-top: 20px;
             margin-left: 1%;
-            background: #2e7d32;
+            background: #2989c0;
             color: white;
             border: none;
             padding: 14px 25px;
@@ -901,7 +967,7 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
         #avancar {
             margin-top: 20px;
             margin-left: 67%;
-            background: #2e7d32;
+            background: #2989c0;
             color: white;
             border: none;
             padding: 14px 25px;
@@ -951,6 +1017,34 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
             text-align: center;
             font-size: 20px;
             font-weight: bold;
+        }
+
+        #perfilDados {
+            height: 250px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #foto {
+            border-radius: 10px;
+            height: 150px;
+            width: 100px;
+            background: gray;
+        }
+
+        #dados {
+            border-radius: 10px;
+            height: 250px;
+            width: 200px;
+            background: rgb(226, 226, 226);
+        }
+
+        .nivelConteudo {
+            padding-top: 15px;
+            border-radius: 10px;
+            height: 50px;
+            width: 320px;
+            background: rgb(226, 226, 226);
         }
 
 
@@ -1028,10 +1122,10 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
 
             if (document.body.classList.contains("escuro")) {
                 temaBtn.innerHTML = "☀️";
-                temaBtn.setAttribute('style', 'background: #2e7d32; font-size: 20px');
+                temaBtn.setAttribute('style', 'background: #1d1d1d; font-size: 20px; justify-self: end');
             } else {
                 temaBtn.innerHTML = "🌙";
-                temaBtn.setAttribute('style', 'background: #2e7d32; font-size: 20px');
+                temaBtn.setAttribute('style', 'background: white; font-size: 20px; justify-self: end;');
             }
 
         });
