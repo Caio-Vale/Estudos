@@ -19,30 +19,6 @@
 
     </header>
 
-
-    <!-- <nav>
-
-        <button class="aba ativa" onclick="abrirAba('dashboard')">
-            📅 Inicio
-        </button>
-
-        <button class="aba" onclick="abrirAba('resumo')">
-            📚 Teoria
-        </button>
-
-        <button class="aba" onclick="abrirAba('quiz')">
-            🧠 Teste
-        </button>
-
-        <button class="aba" onclick="abrirAba('perfil')">
-            ⚙️ Perfil
-        </button>
-
-        
-
-    </nav> -->
-
-
     <main>
         
         <!-- ABA de INICIO -->
@@ -81,8 +57,9 @@
         <section id="resumo" class="conteudo">
 
 
-            <h2>📖 Demonstração do conteudo</h2>
-
+            <h2>📖 Concurso ALECE</h2>
+            <h4>Banca: IDECAN</h4>
+            <h5>Assembleia Legislativa do Estado do Ceará - ALECE</h5>
 
 
             <div class="card">
@@ -562,10 +539,12 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
 
         <section id="quiz" class="conteudo">
 
-
-            <h2>
-                📝 Quiz de Revisão
-            </h2>
+            <div class="ladoALado">
+                <h2>📝 Questões</h2>
+                
+                <h2 id="contador"></h2>
+            </div>
+            
 
 
             <div class="progresso">
@@ -575,9 +554,7 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
             </div>
 
 
-            <p id="contador">
-                Questão 1 de 40
-            </p>
+            
 
 
             <div id="pergunta">
@@ -661,19 +638,19 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
     <nav>
 
         <button class="aba ativa" onclick="abrirAba('dashboard'); recarregarPagina()">
-            📅 Inicio
+            📰​​​ <br>Painel
         </button>
 
         <button class="aba" onclick="abrirAba('resumo')">
-            📚 Teoria
+            📚 <br>Teoria
         </button>
 
         <button class="aba" onclick="abrirAba('quiz')">
-            🧠 Teste
+            🧠 <br>Teste
         </button>
 
         <button class="aba" onclick="abrirAba('perfil')">
-            ⚙️ Perfil
+            🙍‍♂️​  <br>Perfil
         </button>
 
         
@@ -779,6 +756,11 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
             bottom: -10px;
         }
 
+        nav button {
+            width: 80px;
+            padding-bottom: 200px;
+        }
+
         /*   RODAPE   */
 
         footer {
@@ -822,10 +804,18 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
             transform: translateY(-3px);
         }
 
+        .ladoALado {
+            display: flex;
+            justify-content: space-between;
+        }
 
         .aba.ativa {
-            background: #2989c0;
-            color: white;
+            background: white;
+            color: #094568;
+            font-weight: bold;
+            font-size: 17px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+
         }
 
 
@@ -898,6 +888,7 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
 
 
         /* QUIZ */
+
 
         #quiz h2 {
             text-align: center;
@@ -1106,6 +1097,8 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
                 margin-left: 24.5%;
                 
             }
+
+           
 
         }
     </style>
@@ -1886,7 +1879,7 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
             let q = questoes[indice];
 
             contador.innerHTML =
-                `Questão ${indice + 1} de ${questoes.length}`;
+                `${indice + 1} / ${questoes.length}`;
 
             barra.style.width =
                 `${(indice / questoes.length) * 100}%`;
