@@ -9,17 +9,18 @@
 
 <body class="claro">
 
+
+
     <header>
 
-        <h1>Prototipo de Gamificação de Estudo</h1>
-        <!-- <button id="tema">
-            🌙
-        </button> -->
+        <h1>👤</h1>
+        <h2>Caio Vale</h2>
+        
 
     </header>
 
 
-    <nav>
+    <!-- <nav>
 
         <button class="aba ativa" onclick="abrirAba('dashboard')">
             📅 Inicio
@@ -39,7 +40,7 @@
 
         
 
-    </nav>
+    </nav> -->
 
 
     <main>
@@ -648,15 +649,37 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
 
     </main>
 
-    <footer id="rodape">
-        <button id="tenteNovamente" onclick="recarregaPagina()">
+    <!-- <footer id="rodape">
+        <button id="tenteNovamente" onclick="recarregarPagina()">
             <strong>
                 <a href="https://caio-vale.github.io/Estudos/" style="text-decoration: none; color: white">
                     Início
                 </a>
             </strong>
         </button>
-    </footer>
+    </footer> -->
+    <nav>
+
+        <button class="aba ativa" onclick="abrirAba('dashboard'); recarregarPagina()">
+            📅 Inicio
+        </button>
+
+        <button class="aba" onclick="abrirAba('resumo')">
+            📚 Teoria
+        </button>
+
+        <button class="aba" onclick="abrirAba('quiz')">
+            🧠 Teste
+        </button>
+
+        <button class="aba" onclick="abrirAba('perfil')">
+            ⚙️ Perfil
+        </button>
+
+        
+
+    </nav>
+
     <style>
         /* RESET GERAL */
 
@@ -703,15 +726,20 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
             color: white;
             text-align: center;
             padding: 20px;
-            /*position: sticky;*/
-            top: 0;
-            z-index: 10;
+            gap: 10px;
+            border-end-end-radius: 15px ;
+            border-end-start-radius: 15px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
         }
 
 
         header h1 {
-            font-size: 26px;
+            background: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 30px;
         }
+
 
 
         /* BOTÃO DE TEMA */
@@ -739,11 +767,16 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
 
         nav {
             display: flex;
+            width: 100%;
             justify-content: center;
             justify-content: space-between;
             padding: 15px;
-            background: #d9e8ea;
-            position: sticky;
+            background: rgb(255, 255, 255);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            position: fixed;
+            bottom: -10px;
         }
 
         /*   RODAPE   */
@@ -1084,7 +1117,7 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
         // ===========================
 
         function recarregarPagina() {
-            location.reload();
+            location.reload(true);
         }
 
         // ===========================
@@ -1305,517 +1338,517 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
 
                 explicacao:
                     "A visita técnica permite observar a realidade da propriedade e orientar o produtor."
-            },
-
-            {
-                pergunta:
-                    "11) O Diagnóstico Rural Participativo (DRP) tem como característica principal:",
-
-                alternativas: [
-                    "Tomada de decisão exclusiva do técnico",
-                    "Participação dos produtores na identificação de problemas e soluções",
-                    "Fiscalização da propriedade",
-                    "Controle financeiro obrigatório"
-                ],
-
-                correta: 1,
-
-                explicacao:
-                    "O DRP valoriza a participação dos produtores na construção das soluções."
-            },
-
-            {
-                pergunta:
-                    "12) O Pronaf é um programa destinado a:",
-
-                alternativas: [
-                    "Financiar a agricultura familiar",
-                    "Comprar merenda escolar",
-                    "Emitir documentos rurais",
-                    "Controlar exportações"
-                ],
-
-                correta: 0,
-
-                explicacao:
-                    "O Pronaf oferece linhas de financiamento para agricultores familiares."
-            },
-
-            {
-                pergunta:
-                    "13) O Programa de Aquisição de Alimentos é conhecido pela sigla:",
-
-                alternativas: [
-                    "PNAE",
-                    "Pnater",
-                    "PAA",
-                    "CAF"
-                ],
-
-                correta: 2,
-
-                explicacao:
-                    "O PAA realiza a compra de alimentos produzidos pela agricultura familiar."
-            },
-
-            {
-                pergunta:
-                    "14) O PNAE está relacionado principalmente à:",
-
-                alternativas: [
-                    "Exportação agrícola",
-                    "Merenda escolar",
-                    "Produção de insumos",
-                    "Capacitação técnica"
-                ],
-
-                correta: 1,
-
-                explicacao:
-                    "O PNAE adquire alimentos da agricultura familiar para alimentação escolar."
-            },
-
-            {
-                pergunta:
-                    "15) O CAF é obrigatório para:",
-
-                alternativas: [
-                    "Obter licença ambiental",
-                    "Acessar programas públicos voltados à agricultura familiar",
-                    "Registrar imóveis urbanos",
-                    "Participar de exportações"
-                ],
-
-                correta: 1,
-
-                explicacao:
-                    "O Cadastro Nacional da Agricultura Familiar é requisito para acesso a diversos programas públicos."
-            },
-
-            {
-                pergunta:
-                    "16) Qual fator influencia o mercado agropecuário?",
-
-                alternativas: [
-                    "Clima",
-                    "Câmbio",
-                    "Mercado internacional",
-                    "Todas as alternativas"
-                ],
-
-                correta: 3,
-
-                explicacao:
-                    "O mercado agropecuário sofre influência de diversos fatores internos e externos."
-            },
-
-            {
-                pergunta:
-                    "17) Commodities são caracterizadas por:",
-
-                alternativas: [
-                    "Foco em volume e custo",
-                    "Foco exclusivo em certificações",
-                    "Produção artesanal",
-                    "Mercado local restrito"
-                ],
-
-                correta: 0,
-
-                explicacao:
-                    "As commodities priorizam escala produtiva e competitividade de custos."
-            },
-
-            {
-                pergunta:
-                    "18) Mercados de nicho normalmente valorizam:",
-
-                alternativas: [
-                    "Somente volume",
-                    "Qualidade, certificação e valor agregado",
-                    "Baixo preço apenas",
-                    "Produção em massa"
-                ],
-
-                correta: 1,
-
-                explicacao:
-                    "Produtos de nicho geralmente recebem maior valor devido à diferenciação."
-            },
-
-            {
-                pergunta:
-                    "19) Qual das opções representa uma oportunidade profissional para técnicos da área?",
-
-                alternativas: [
-                    "AgTechs",
-                    "Cooperativas",
-                    "Consultoria privada",
-                    "Todas as alternativas"
-                ],
-
-                correta: 3,
-
-                explicacao:
-                    "Existem diversas oportunidades profissionais ligadas ao setor agropecuário."
-            },
-
-            {
-                pergunta:
-                    "20) O uso de drones e sensores está relacionado à:",
-
-                alternativas: [
-                    "Agricultura e pecuária de precisão",
-                    "Produção artesanal",
-                    "Comércio internacional",
-                    "Legislação ambiental"
-                ],
-
-                correta: 0,
-
-                explicacao:
-                    "Drones e sensores auxiliam a coleta de dados para decisões mais precisas."
-            },
-
-            {
-                pergunta:
-                    "21) A comunicação verbal refere-se principalmente:",
-
-                alternativas: [
-                    "À linguagem corporal",
-                    "À expressão por palavras faladas ou escritas",
-                    "Apenas a gestos",
-                    "Apenas à aparência"
-                ],
-
-                correta: 1,
-
-                explicacao:
-                    "A comunicação verbal utiliza palavras para transmitir informações."
-            },
-
-            {
-                pergunta:
-                    "22) A escuta ativa consiste em:",
-
-                alternativas: [
-                    "Ouvir sem prestar atenção",
-                    "Escutar e compreender o interlocutor",
-                    "Interromper constantemente",
-                    "Discordar automaticamente"
-                ],
-
-                correta: 1,
-
-                explicacao:
-                    "A escuta ativa busca compreender a mensagem transmitida pelo interlocutor."
-            },
-
-            {
-                pergunta:
-                    "23) A adaptação da linguagem ao público rural tem como objetivo:",
-
-                alternativas: [
-                    "Facilitar a compreensão",
-                    "Impressionar o produtor",
-                    "Utilizar termos complexos",
-                    "Evitar diálogo"
-                ],
-
-                correta: 0,
-
-                explicacao:
-                    "A comunicação deve ser adequada ao público para garantir entendimento."
-            },
-
-            {
-                pergunta:
-                    "24) A ética profissional envolve:",
-
-                alternativas: [
-                    "Responsabilidade e respeito",
-                    "Manipulação de informações",
-                    "Interesses pessoais acima do coletivo",
-                    "Falta de transparência"
-                ],
-
-                correta: 0,
-
-                explicacao:
-                    "A ética orienta comportamentos responsáveis e transparentes."
-            },
-
-            {
-                pergunta:
-                    "25) Uma característica importante da liderança é:",
-
-                alternativas: [
-                    "Impor decisões sem diálogo",
-                    "Inspirar e orientar equipes",
-                    "Evitar responsabilidades",
-                    "Trabalhar sozinho"
-                ],
-
-                correta: 1,
-
-                explicacao:
-                    "O líder contribui para o alcance de objetivos e desenvolvimento da equipe."
-            },
-
-            {
-                pergunta:
-                    "26) A mediação de conflitos busca:",
-
-                alternativas: [
-                    "Aumentar divergências",
-                    "Resolver problemas por meio do diálogo",
-                    "Punir envolvidos",
-                    "Ignorar os conflitos"
-                ],
-
-                correta: 1,
-
-                explicacao:
-                    "A mediação procura soluções equilibradas e construtivas."
-            },
-
-            {
-                pergunta:
-                    "27) O que significa atualização contínua?",
-
-                alternativas: [
-                    "Parar de estudar após a formação",
-                    "Buscar constantemente novos conhecimentos",
-                    "Evitar tecnologias",
-                    "Manter métodos antigos"
-                ],
-
-                correta: 1,
-
-                explicacao:
-                    "O profissional deve acompanhar mudanças e inovações do setor."
-            },
-
-            {
-                pergunta:
-                    "28) O diagnóstico da propriedade rural envolve:",
-
-                alternativas: [
-                    "Levantamento dos processos produtivos",
-                    "Apenas análise financeira",
-                    "Apenas análise ambiental",
-                    "Somente observação visual"
-                ],
-
-                correta: 0,
-
-                explicacao:
-                    "O diagnóstico considera informações amplas sobre a propriedade."
-            },
-
-            {
-                pergunta:
-                    "29) O ciclo PDCA significa:",
-
-                alternativas: [
-                    "Planejar, Fazer, Verificar e Agir",
-                    "Planejar, Desenvolver, Controlar e Avaliar",
-                    "Produzir, Distribuir, Comercializar e Analisar",
-                    "Pesquisar, Desenvolver, Controlar e Aplicar"
-                ],
-
-                correta: 0,
-
-                explicacao:
-                    "O PDCA é uma ferramenta de melhoria contínua composta por Planejar, Fazer, Verificar e Agir."
-            },
-
-            {
-                pergunta:
-                    "30) A ferramenta 5W3H é utilizada para:",
-
-                alternativas: [
-                    "Planejamento e organização de ações",
-                    "Controle climático",
-                    "Produção agrícola",
-                    "Fiscalização ambiental"
-                ],
-
-                correta: 0,
-
-                explicacao:
-                    "O 5W3H auxilia na definição de ações, responsabilidades e prazos."
-            },
-
-            {
-                pergunta:
-                    "31) A avaliação de desempenho técnico e econômico serve para:",
-
-                alternativas: [
-                    "Medir resultados da propriedade",
-                    "Substituir o produtor",
-                    "Controlar apenas funcionários",
-                    "Registrar documentos"
-                ],
-
-                correta: 0,
-
-                explicacao:
-                    "A avaliação permite identificar pontos fortes e oportunidades de melhoria."
-            },
-
-            {
-                pergunta:
-                    "32) A agricultura sustentável busca:",
-
-                alternativas: [
-                    "Produção sem preocupação ambiental",
-                    "Equilíbrio entre produção e conservação dos recursos",
-                    "Apenas aumento da produtividade",
-                    "Redução da tecnologia"
-                ],
-
-                correta: 1,
-
-                explicacao:
-                    "A agricultura sustentável preserva recursos naturais e mantém a produção."
-            },
-
-            {
-                pergunta:
-                    "33) A integração lavoura-pecuária consiste em:",
-
-                alternativas: [
-                    "Separar atividades agrícolas e pecuárias",
-                    "Integrar produção agrícola e pecuária na mesma área",
-                    "Produzir apenas grãos",
-                    "Criar apenas animais"
-                ],
-
-                correta: 1,
-
-                explicacao:
-                    "A integração melhora o uso dos recursos e a sustentabilidade."
-            },
-
-            {
-                pergunta:
-                    "34) A rotação de culturas contribui para:",
-
-                alternativas: [
-                    "Melhoria do solo e redução de pragas",
-                    "Aumento exclusivo dos custos",
-                    "Desgaste do solo",
-                    "Redução da produtividade"
-                ],
-
-                correta: 0,
-
-                explicacao:
-                    "A rotação ajuda a conservar o solo e reduzir problemas fitossanitários."
-            },
-
-            {
-                pergunta:
-                    "35) O controle integrado de pragas tem como objetivo:",
-
-                alternativas: [
-                    "Eliminar toda forma de vida",
-                    "Controlar pragas de forma sustentável",
-                    "Usar apenas defensivos químicos",
-                    "Abandonar o monitoramento"
-                ],
-
-                correta: 1,
-
-                explicacao:
-                    "O manejo integrado combina diferentes estratégias para controlar pragas."
-            },
-
-            {
-                pergunta:
-                    "36) A gestão correta de resíduos e embalagens contribui para:",
-
-                alternativas: [
-                    "Aumento da poluição",
-                    "Sustentabilidade ambiental",
-                    "Desperdício de recursos",
-                    "Redução da segurança"
-                ],
-
-                correta: 1,
-
-                explicacao:
-                    "O manejo adequado reduz impactos ambientais."
-            },
-
-            {
-                pergunta:
-                    "37) A segurança do trabalho rural visa:",
-
-                alternativas: [
-                    "Prevenir acidentes e riscos ocupacionais",
-                    "Aumentar riscos",
-                    "Reduzir produtividade",
-                    "Eliminar treinamentos"
-                ],
-
-                correta: 0,
-
-                explicacao:
-                    "A segurança protege trabalhadores e melhora as condições de trabalho."
-            },
-
-            {
-                pergunta:
-                    "38) Os indicadores produtivos, econômicos e ambientais são utilizados para:",
-
-                alternativas: [
-                    "Monitorar resultados e desempenho",
-                    "Substituir relatórios",
-                    "Controlar apenas receitas",
-                    "Controlar apenas produção"
-                ],
-
-                correta: 0,
-
-                explicacao:
-                    "Os indicadores auxiliam o acompanhamento da evolução da propriedade."
-            },
-
-            {
-                pergunta:
-                    "39) A elaboração de relatórios técnicos é importante porque:",
-
-                alternativas: [
-                    "Documenta informações e resultados",
-                    "Substitui o monitoramento",
-                    "Dispensa coleta de dados",
-                    "Evita transparência"
-                ],
-
-                correta: 0,
-
-                explicacao:
-                    "Os relatórios registram informações importantes para análise e tomada de decisão."
-            },
-
-            {
-                pergunta:
-                    "40) A melhoria contínua depende principalmente de:",
-
-                alternativas: [
-                    "Feedback, monitoramento e capacitação contínua",
-                    "Apenas investimentos financeiros",
-                    "Somente aumento da produção",
-                    "Redução do controle"
-                ],
-
-                correta: 0,
-
-                explicacao:
-                    "A melhoria contínua ocorre por meio da avaliação constante, correções e aprendizado permanente."
-            }
+            }//,
+
+            // {
+            //     pergunta:
+            //         "11) O Diagnóstico Rural Participativo (DRP) tem como característica principal:",
+
+            //     alternativas: [
+            //         "Tomada de decisão exclusiva do técnico",
+            //         "Participação dos produtores na identificação de problemas e soluções",
+            //         "Fiscalização da propriedade",
+            //         "Controle financeiro obrigatório"
+            //     ],
+
+            //     correta: 1,
+
+            //     explicacao:
+            //         "O DRP valoriza a participação dos produtores na construção das soluções."
+            // },
+
+            // {
+            //     pergunta:
+            //         "12) O Pronaf é um programa destinado a:",
+
+            //     alternativas: [
+            //         "Financiar a agricultura familiar",
+            //         "Comprar merenda escolar",
+            //         "Emitir documentos rurais",
+            //         "Controlar exportações"
+            //     ],
+
+            //     correta: 0,
+
+            //     explicacao:
+            //         "O Pronaf oferece linhas de financiamento para agricultores familiares."
+            // },
+
+            // {
+            //     pergunta:
+            //         "13) O Programa de Aquisição de Alimentos é conhecido pela sigla:",
+
+            //     alternativas: [
+            //         "PNAE",
+            //         "Pnater",
+            //         "PAA",
+            //         "CAF"
+            //     ],
+
+            //     correta: 2,
+
+            //     explicacao:
+            //         "O PAA realiza a compra de alimentos produzidos pela agricultura familiar."
+            // },
+
+            // {
+            //     pergunta:
+            //         "14) O PNAE está relacionado principalmente à:",
+
+            //     alternativas: [
+            //         "Exportação agrícola",
+            //         "Merenda escolar",
+            //         "Produção de insumos",
+            //         "Capacitação técnica"
+            //     ],
+
+            //     correta: 1,
+
+            //     explicacao:
+            //         "O PNAE adquire alimentos da agricultura familiar para alimentação escolar."
+            // },
+
+            // {
+            //     pergunta:
+            //         "15) O CAF é obrigatório para:",
+
+            //     alternativas: [
+            //         "Obter licença ambiental",
+            //         "Acessar programas públicos voltados à agricultura familiar",
+            //         "Registrar imóveis urbanos",
+            //         "Participar de exportações"
+            //     ],
+
+            //     correta: 1,
+
+            //     explicacao:
+            //         "O Cadastro Nacional da Agricultura Familiar é requisito para acesso a diversos programas públicos."
+            // },
+
+            // {
+            //     pergunta:
+            //         "16) Qual fator influencia o mercado agropecuário?",
+
+            //     alternativas: [
+            //         "Clima",
+            //         "Câmbio",
+            //         "Mercado internacional",
+            //         "Todas as alternativas"
+            //     ],
+
+            //     correta: 3,
+
+            //     explicacao:
+            //         "O mercado agropecuário sofre influência de diversos fatores internos e externos."
+            // },
+
+            // {
+            //     pergunta:
+            //         "17) Commodities são caracterizadas por:",
+
+            //     alternativas: [
+            //         "Foco em volume e custo",
+            //         "Foco exclusivo em certificações",
+            //         "Produção artesanal",
+            //         "Mercado local restrito"
+            //     ],
+
+            //     correta: 0,
+
+            //     explicacao:
+            //         "As commodities priorizam escala produtiva e competitividade de custos."
+            // },
+
+            // {
+            //     pergunta:
+            //         "18) Mercados de nicho normalmente valorizam:",
+
+            //     alternativas: [
+            //         "Somente volume",
+            //         "Qualidade, certificação e valor agregado",
+            //         "Baixo preço apenas",
+            //         "Produção em massa"
+            //     ],
+
+            //     correta: 1,
+
+            //     explicacao:
+            //         "Produtos de nicho geralmente recebem maior valor devido à diferenciação."
+            // },
+
+            // {
+            //     pergunta:
+            //         "19) Qual das opções representa uma oportunidade profissional para técnicos da área?",
+
+            //     alternativas: [
+            //         "AgTechs",
+            //         "Cooperativas",
+            //         "Consultoria privada",
+            //         "Todas as alternativas"
+            //     ],
+
+            //     correta: 3,
+
+            //     explicacao:
+            //         "Existem diversas oportunidades profissionais ligadas ao setor agropecuário."
+            // },
+
+            // {
+            //     pergunta:
+            //         "20) O uso de drones e sensores está relacionado à:",
+
+            //     alternativas: [
+            //         "Agricultura e pecuária de precisão",
+            //         "Produção artesanal",
+            //         "Comércio internacional",
+            //         "Legislação ambiental"
+            //     ],
+
+            //     correta: 0,
+
+            //     explicacao:
+            //         "Drones e sensores auxiliam a coleta de dados para decisões mais precisas."
+            // },
+
+            // {
+            //     pergunta:
+            //         "21) A comunicação verbal refere-se principalmente:",
+
+            //     alternativas: [
+            //         "À linguagem corporal",
+            //         "À expressão por palavras faladas ou escritas",
+            //         "Apenas a gestos",
+            //         "Apenas à aparência"
+            //     ],
+
+            //     correta: 1,
+
+            //     explicacao:
+            //         "A comunicação verbal utiliza palavras para transmitir informações."
+            // },
+
+            // {
+            //     pergunta:
+            //         "22) A escuta ativa consiste em:",
+
+            //     alternativas: [
+            //         "Ouvir sem prestar atenção",
+            //         "Escutar e compreender o interlocutor",
+            //         "Interromper constantemente",
+            //         "Discordar automaticamente"
+            //     ],
+
+            //     correta: 1,
+
+            //     explicacao:
+            //         "A escuta ativa busca compreender a mensagem transmitida pelo interlocutor."
+            // },
+
+            // {
+            //     pergunta:
+            //         "23) A adaptação da linguagem ao público rural tem como objetivo:",
+
+            //     alternativas: [
+            //         "Facilitar a compreensão",
+            //         "Impressionar o produtor",
+            //         "Utilizar termos complexos",
+            //         "Evitar diálogo"
+            //     ],
+
+            //     correta: 0,
+
+            //     explicacao:
+            //         "A comunicação deve ser adequada ao público para garantir entendimento."
+            // },
+
+            // {
+            //     pergunta:
+            //         "24) A ética profissional envolve:",
+
+            //     alternativas: [
+            //         "Responsabilidade e respeito",
+            //         "Manipulação de informações",
+            //         "Interesses pessoais acima do coletivo",
+            //         "Falta de transparência"
+            //     ],
+
+            //     correta: 0,
+
+            //     explicacao:
+            //         "A ética orienta comportamentos responsáveis e transparentes."
+            // },
+
+            // {
+            //     pergunta:
+            //         "25) Uma característica importante da liderança é:",
+
+            //     alternativas: [
+            //         "Impor decisões sem diálogo",
+            //         "Inspirar e orientar equipes",
+            //         "Evitar responsabilidades",
+            //         "Trabalhar sozinho"
+            //     ],
+
+            //     correta: 1,
+
+            //     explicacao:
+            //         "O líder contribui para o alcance de objetivos e desenvolvimento da equipe."
+            // },
+
+            // {
+            //     pergunta:
+            //         "26) A mediação de conflitos busca:",
+
+            //     alternativas: [
+            //         "Aumentar divergências",
+            //         "Resolver problemas por meio do diálogo",
+            //         "Punir envolvidos",
+            //         "Ignorar os conflitos"
+            //     ],
+
+            //     correta: 1,
+
+            //     explicacao:
+            //         "A mediação procura soluções equilibradas e construtivas."
+            // },
+
+            // {
+            //     pergunta:
+            //         "27) O que significa atualização contínua?",
+
+            //     alternativas: [
+            //         "Parar de estudar após a formação",
+            //         "Buscar constantemente novos conhecimentos",
+            //         "Evitar tecnologias",
+            //         "Manter métodos antigos"
+            //     ],
+
+            //     correta: 1,
+
+            //     explicacao:
+            //         "O profissional deve acompanhar mudanças e inovações do setor."
+            // },
+
+            // {
+            //     pergunta:
+            //         "28) O diagnóstico da propriedade rural envolve:",
+
+            //     alternativas: [
+            //         "Levantamento dos processos produtivos",
+            //         "Apenas análise financeira",
+            //         "Apenas análise ambiental",
+            //         "Somente observação visual"
+            //     ],
+
+            //     correta: 0,
+
+            //     explicacao:
+            //         "O diagnóstico considera informações amplas sobre a propriedade."
+            // },
+
+            // {
+            //     pergunta:
+            //         "29) O ciclo PDCA significa:",
+
+            //     alternativas: [
+            //         "Planejar, Fazer, Verificar e Agir",
+            //         "Planejar, Desenvolver, Controlar e Avaliar",
+            //         "Produzir, Distribuir, Comercializar e Analisar",
+            //         "Pesquisar, Desenvolver, Controlar e Aplicar"
+            //     ],
+
+            //     correta: 0,
+
+            //     explicacao:
+            //         "O PDCA é uma ferramenta de melhoria contínua composta por Planejar, Fazer, Verificar e Agir."
+            // },
+
+            // {
+            //     pergunta:
+            //         "30) A ferramenta 5W3H é utilizada para:",
+
+            //     alternativas: [
+            //         "Planejamento e organização de ações",
+            //         "Controle climático",
+            //         "Produção agrícola",
+            //         "Fiscalização ambiental"
+            //     ],
+
+            //     correta: 0,
+
+            //     explicacao:
+            //         "O 5W3H auxilia na definição de ações, responsabilidades e prazos."
+            // },
+
+            // {
+            //     pergunta:
+            //         "31) A avaliação de desempenho técnico e econômico serve para:",
+
+            //     alternativas: [
+            //         "Medir resultados da propriedade",
+            //         "Substituir o produtor",
+            //         "Controlar apenas funcionários",
+            //         "Registrar documentos"
+            //     ],
+
+            //     correta: 0,
+
+            //     explicacao:
+            //         "A avaliação permite identificar pontos fortes e oportunidades de melhoria."
+            // },
+
+            // {
+            //     pergunta:
+            //         "32) A agricultura sustentável busca:",
+
+            //     alternativas: [
+            //         "Produção sem preocupação ambiental",
+            //         "Equilíbrio entre produção e conservação dos recursos",
+            //         "Apenas aumento da produtividade",
+            //         "Redução da tecnologia"
+            //     ],
+
+            //     correta: 1,
+
+            //     explicacao:
+            //         "A agricultura sustentável preserva recursos naturais e mantém a produção."
+            // },
+
+            // {
+            //     pergunta:
+            //         "33) A integração lavoura-pecuária consiste em:",
+
+            //     alternativas: [
+            //         "Separar atividades agrícolas e pecuárias",
+            //         "Integrar produção agrícola e pecuária na mesma área",
+            //         "Produzir apenas grãos",
+            //         "Criar apenas animais"
+            //     ],
+
+            //     correta: 1,
+
+            //     explicacao:
+            //         "A integração melhora o uso dos recursos e a sustentabilidade."
+            // },
+
+            // {
+            //     pergunta:
+            //         "34) A rotação de culturas contribui para:",
+
+            //     alternativas: [
+            //         "Melhoria do solo e redução de pragas",
+            //         "Aumento exclusivo dos custos",
+            //         "Desgaste do solo",
+            //         "Redução da produtividade"
+            //     ],
+
+            //     correta: 0,
+
+            //     explicacao:
+            //         "A rotação ajuda a conservar o solo e reduzir problemas fitossanitários."
+            // },
+
+            // {
+            //     pergunta:
+            //         "35) O controle integrado de pragas tem como objetivo:",
+
+            //     alternativas: [
+            //         "Eliminar toda forma de vida",
+            //         "Controlar pragas de forma sustentável",
+            //         "Usar apenas defensivos químicos",
+            //         "Abandonar o monitoramento"
+            //     ],
+
+            //     correta: 1,
+
+            //     explicacao:
+            //         "O manejo integrado combina diferentes estratégias para controlar pragas."
+            // },
+
+            // {
+            //     pergunta:
+            //         "36) A gestão correta de resíduos e embalagens contribui para:",
+
+            //     alternativas: [
+            //         "Aumento da poluição",
+            //         "Sustentabilidade ambiental",
+            //         "Desperdício de recursos",
+            //         "Redução da segurança"
+            //     ],
+
+            //     correta: 1,
+
+            //     explicacao:
+            //         "O manejo adequado reduz impactos ambientais."
+            // },
+
+            // {
+            //     pergunta:
+            //         "37) A segurança do trabalho rural visa:",
+
+            //     alternativas: [
+            //         "Prevenir acidentes e riscos ocupacionais",
+            //         "Aumentar riscos",
+            //         "Reduzir produtividade",
+            //         "Eliminar treinamentos"
+            //     ],
+
+            //     correta: 0,
+
+            //     explicacao:
+            //         "A segurança protege trabalhadores e melhora as condições de trabalho."
+            // },
+
+            // {
+            //     pergunta:
+            //         "38) Os indicadores produtivos, econômicos e ambientais são utilizados para:",
+
+            //     alternativas: [
+            //         "Monitorar resultados e desempenho",
+            //         "Substituir relatórios",
+            //         "Controlar apenas receitas",
+            //         "Controlar apenas produção"
+            //     ],
+
+            //     correta: 0,
+
+            //     explicacao:
+            //         "Os indicadores auxiliam o acompanhamento da evolução da propriedade."
+            // },
+
+            // {
+            //     pergunta:
+            //         "39) A elaboração de relatórios técnicos é importante porque:",
+
+            //     alternativas: [
+            //         "Documenta informações e resultados",
+            //         "Substitui o monitoramento",
+            //         "Dispensa coleta de dados",
+            //         "Evita transparência"
+            //     ],
+
+            //     correta: 0,
+
+            //     explicacao:
+            //         "Os relatórios registram informações importantes para análise e tomada de decisão."
+            // },
+
+            // {
+            //     pergunta:
+            //         "40) A melhoria contínua depende principalmente de:",
+
+            //     alternativas: [
+            //         "Feedback, monitoramento e capacitação contínua",
+            //         "Apenas investimentos financeiros",
+            //         "Somente aumento da produção",
+            //         "Redução do controle"
+            //     ],
+
+            //     correta: 0,
+
+            //     explicacao:
+            //         "A melhoria contínua ocorre por meio da avaliação constante, correções e aprendizado permanente."
+            // }
 
         ];
         // ===========================
@@ -2048,49 +2081,49 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
 
 
             let nota =
-                (acertos / questoes.length) * 100;
+                (acertos / questoes.length) * 10;
 
 
             let mensagem = "";
 
 
-            if (nota == 100) {
+            if (nota == 10) {
                 mensagem =
-                    "🏆🏆🏆 Incrivel, você é nota 1000! 🏆🏆🏆 <br><br><br> Tente de novamente! <br> Clicando abaixo.";
+                    "🏆🏆🏆 Incrivel, você é nota 1000! 🏆🏆🏆";
             }
 
-            else if (nota >= 90) {
+            else if (nota >= 9) {
 
                 mensagem =
-                    "🏆 Excelente! Seu domínio do conteúdo está ótimo. <br><br><br> Tente de novamente! <br> Clicando abaixo.";
-
-            }
-
-            else if (nota >= 70) {
-
-                mensagem =
-                    "✅ Bom desempenho! Continue revisando os detalhes. <br><br><br> Tente de novamente! <br> Clicando abaixo.";
+                    "🏆 Excelente! Seu domínio do conteúdo está ótimo.";
 
             }
 
-            else if (nota >= 50) {
+            else if (nota >= 7) {
 
                 mensagem =
-                    "⚠️ Desempenho regular. Revise os assuntos com mais atenção. <br><br><br> Tente de novamente! <br> Clicando abaixo.";
+                    "✅ Bom desempenho! Continue revisando os detalhes.";
+
+            }
+
+            else if (nota >= 5) {
+
+                mensagem =
+                    "⚠️ Desempenho regular. Revise os assuntos com mais atenção.";
 
             }
 
             else if (nota == 0) {
 
                 mensagem =
-                    "⚠️⚠️⚠️ Incrivel ⚠️⚠️⚠️<br> Você conseguiu errar todas! <br><br><br> Tente de novamente! <br> Clicando abaixo.";
+                    "⚠️⚠️⚠️ Incrivel ⚠️⚠️⚠️<br> Você conseguiu errar todas! ";
 
             }
 
             else {
 
                 mensagem =
-                    "📚 É necessário estudar novamente o conteúdo. 📚 <br><br><br> Tente de novamente! <br> Clicando abaixo.";
+                    "📚 É necessário estudar novamente o conteúdo. 📚";
 
             }
 
@@ -2106,12 +2139,14 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
 
         <p>
         Sua nota foi:
-        <strong>${nota.toFixed(1)}/100</strong>
+        <strong>${nota.toFixed(1)}/10</strong>
         </p>
 
         <br>
 
-        <p>${mensagem}</p>`;
+        <p>${mensagem}</p>
+        
+        <br><br><br> Volte para o inicio para tentar novamente.`;
 
 
         }
