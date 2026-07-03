@@ -15,19 +15,25 @@
 
         <h1>👤</h1>
         <h2>Caio Vale</h2>
-        
+
 
     </header>
 
+    <aside>
+
+    </aside>
+
     <main>
-        
-        <!-- ABA de INICIO -->
+
+        <!-- ABA de Painel -->
 
         <section id='dashboard' class="conteudo ativo">
 
             <div class="card">
                 <h1>Introdução</h1>
-                <p>O objetivo deste protótipo é aumentar a produtividade do estudante, seja concurseiro, curiosos ou alunos de faculdade ou escolas, para facilitar a absorção de conhecimento de forma rápida e concisa.</p>
+                <p>O objetivo deste protótipo é aumentar a produtividade do estudante, seja concurseiro, curiosos ou
+                    alunos de faculdade ou escolas, para facilitar a absorção de conhecimento de forma rápida e concisa.
+                </p>
             </div>
 
             <div class="card">
@@ -45,14 +51,14 @@
                 <p>Informativos sobre certificações, vertibulares ou concurso.</p>
             </div>
 
-            
 
-            
+
+
 
         </section>
 
 
-        <!-- ABA RESUMO -->
+        <!-- ABA Teoria -->
 
         <section id="resumo" class="conteudo">
 
@@ -61,6 +67,13 @@
             <h4>Banca: IDECAN</h4>
             <h5>Assembleia Legislativa do Estado do Ceará - ALECE</h5>
 
+
+            <aside>
+                <button id="tagMateria"><a href="#materia2"> Lingua Portuguêsa </a></button>
+                <button id="tagMateria"><a href="#materia3"> Raciocínio Lógico </a></button>
+                <button id="tagMateria"><a href="#materia4"> Legislação e Ética no Serviço Público </a></button>
+                <button id="tagMateria"><a href="#materia5"> Conhecimentos Especificos ao Cargo </a></button>
+            </aside>
 
             <div class="card">
 
@@ -88,7 +101,7 @@
 
             </div>
 
-            <div class="card">
+            <div class="card" id="materia2">
 
                 <h3>2. Evolução dos Modelos de ATER</h3>
 
@@ -113,7 +126,7 @@
 
             </div>
 
-            <div class="card">
+            <div class="card" id="materia3">
 
                 <h3>3. Pnater e Anater</h3>
 
@@ -136,7 +149,7 @@
 
             </div>
 
-            <div class="card">
+            <div class="card" id="materia4">
 
                 <h3>4. Dimensões da Propriedade Rural</h3>
 
@@ -535,16 +548,16 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
         </section>
 
 
-        <!-- ABA QUIZ -->
+        <!-- ABA Teste -->
 
         <section id="quiz" class="conteudo">
 
             <div class="ladoALado">
                 <h2>📝 Questões</h2>
-                
+
                 <h2 id="contador"></h2>
             </div>
-            
+
 
 
             <div class="progresso">
@@ -554,13 +567,12 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
             </div>
 
 
-            
 
+            
 
             <div id="pergunta">
 
             </div>
-
 
             <div id="alternativas">
 
@@ -569,7 +581,7 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
 
             <button id="responder">
                 <strong>
-                    Responder
+                    Conferir
                 </strong>
             </button>
 
@@ -581,7 +593,7 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
 
 
             <div id="resultado">
-
+                
             </div>
 
 
@@ -596,8 +608,8 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
         <!-- ABA PERFIL -->
 
         <section id="perfil" class="conteudo">
-            
-             <div class="card">
+
+            <div class="card">
 
                 <button id="tema" style="justify-self: end;">🌙</button>
                 <h1>Status</h1>
@@ -635,7 +647,7 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
             </strong>
         </button>
     </footer> -->
-    <nav>
+    <nav >
 
         <button class="aba ativa" onclick="abrirAba('dashboard'); recarregarPagina()">
             📰​​​ <br>Painel
@@ -650,10 +662,10 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
         </button>
 
         <button class="aba" onclick="abrirAba('perfil')">
-            🙍‍♂️​  <br>Perfil
+            🙍‍♂️​ <br>Perfil
         </button>
 
-        
+
 
     </nav>
 
@@ -702,11 +714,13 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
             background: #2989c0;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 10px;
             gap: 10px;
-            border-end-end-radius: 15px ;
+            border-end-end-radius: 15px;
             border-end-start-radius: 15px;
             box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
         }
 
 
@@ -726,7 +740,7 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
             display: flex;
             background: white;
             border: none;
-            margin-left:10px ;
+            margin-left: 10px;
             border-radius: 20px;
             cursor: pointer;
             font-weight: bold;
@@ -759,6 +773,18 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
         nav button {
             width: 80px;
             padding-bottom: 200px;
+        }
+
+        #tagMateria {
+            font-weight: bold;
+            padding: 0% 5%;
+            height: 30px;
+            border-radius: 15px;
+        }
+
+        #tagMateria>a {
+            text-decoration: none;
+            color: black;
         }
 
         /*   RODAPE   */
@@ -826,6 +852,7 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
             padding: 25px;
             max-width: 900px;
             margin: auto;
+            margin-bottom: 50px;
         }
 
 
@@ -861,7 +888,8 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
         }
 
 
-        .card ul, .card ol {
+        .card ul,
+        .card ol {
             margin-left: 25px;
         }
 
@@ -937,6 +965,10 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
             margin-top: 20px;
         }
 
+        #alternativas>div {
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        }
+
 
         .opcao {
             background: white;
@@ -972,9 +1004,10 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
         #responder {
             margin-top: 20px;
             margin-left: 1%;
-            background: #2989c0;
-            color: white;
+            background: white;
+            color: rgb(7, 59, 7);
             border: none;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
             padding: 14px 25px;
             border-radius: 20px;
             cursor: pointer;
@@ -991,13 +1024,15 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
         #avancar {
             margin-top: 20px;
             margin-left: 67%;
-            background: #2989c0;
-            color: white;
+            background: white;
+            color: rgb(152, 99, 0);
             border: none;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
             padding: 14px 25px;
             border-radius: 20px;
             cursor: pointer;
             font-size: 16px;
+            margin-bottom: 30px;
         }
 
 
@@ -1022,6 +1057,7 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
             background: #d4edda;
             color: #155724;
             border: 2px solid #28a745;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
         }
 
 
@@ -1095,10 +1131,10 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
 
             #avancar {
                 margin-left: 24.5%;
-                
+
             }
 
-           
+
 
         }
     </style>
@@ -1171,7 +1207,8 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
                     "Apenas aumentar a produção agrícola",
                     "Fiscalizar propriedades rurais",
                     "Promover desenvolvimento sustentável, produtividade, gestão e qualidade de vida",
-                    "Substituir o trabalho do produtor"
+                    "Substituir o trabalho do produtor",
+                    "Aumentar o trabalho do agricultor"
                 ],
 
                 correta: 2,
@@ -1844,6 +1881,9 @@ Taxa de retorno = (Lucro ÷ Capital investido) × 100
             // }
 
         ];
+        
+        
+        
         // ===========================
         // VARIÁVEIS DO QUIZ
         // ===========================
